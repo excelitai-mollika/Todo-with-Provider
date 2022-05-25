@@ -119,48 +119,7 @@ class _HomeScreenState extends State<HomeScreen>
                     ],
 
                   ),
-                    // child: TimeRange(
-                    //   fromTitle: Text(
-                    //     'FROM',
-                    //     style: TextStyle(
-                    //       fontSize: 14,
-                    //       color: dark,
-                    //       fontWeight: FontWeight.w600,
-                    //     ),
-                    //   ),
-                    //   toTitle: Text(
-                    //     'TO',
-                    //     style: TextStyle(
-                    //       fontSize: 14,
-                    //       color: dark,
-                    //       fontWeight: FontWeight.w600,
-                    //     ),
-                    //   ),
-                    //   titlePadding: leftPadding,
-                    //   textStyle: TextStyle(
-                    //     fontWeight: FontWeight.normal,
-                    //     color: dark,
-                    //   ),
-                    //   activeTextStyle: TextStyle(
-                    //     fontWeight: FontWeight.bold,
-                    //     color: Colors.white,
-                    //   ),
-                    //   borderColor: dark,
-                    //   activeBorderColor: dark,
-                    //   backgroundColor: Colors.transparent,
-                    //   activeBackgroundColor: Theme.of(context)
-                    //       .colorScheme
-                    //       .primary,
-                    //   firstTime:
-                    //   TimeOfDay(hour: 8, minute: 00),
-                    //   lastTime:
-                    //   TimeOfDay(hour: 22, minute: 00),
-                    //   initialRange: _timeRange,
-                    //   timeStep: 10,
-                    //   timeBlock: 30,
-                    //   onRangeCompleted: (range) =>
-                    //       setState(() => _timeRange = range),
-                    // ),
+
                   );
                 },
               );

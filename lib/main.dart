@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:todo_app/edit_task.dart';
 import 'package:todo_app/home_screen.dart';
 import 'package:todo_app/provider.dart';
 
@@ -33,6 +34,9 @@ class MyApp extends StatelessWidget {
           primarySwatch: Colors.blue,
         ),
         home: HomeScreen(),
+        routes: {
+          EditProductScreen.routeName: (ctx) => EditProductScreen(),
+        },
       ),
     );
   }

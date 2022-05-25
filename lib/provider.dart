@@ -20,13 +20,20 @@ class TodosModel extends ChangeNotifier {
     _tasks.add(task);
     notifyListeners();
   }
-
+  Task findById(String id) {
+    return _tasks.firstWhere((prod) => prod.id == id);
+  }
   void toggleTodo(Task task) {
     final taskIndex = _tasks.indexOf(task);
     _tasks[taskIndex].toggleCompleted();
     notifyListeners();
   }
-
+  void editTodo(String id,Task task) {
+    final prodIndex = _tasks.indexWhere((prod) => prod.id == id);
+   // final taskIndex = _tasks.indexOf(task);
+    _tasks[prodIndex]=task;
+    notifyListeners();
+  }
   void deleteTodo(Task task) {
     _tasks.remove(task);
     notifyListeners();

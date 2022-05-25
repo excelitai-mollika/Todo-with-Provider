@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-class Task {
+class Task with ChangeNotifier{
   String ?title;
   bool completed;
-
-  Task({@required this.title, this.completed = false});
+  final String? id;
+  Task({@required this.title, this.completed = false,this.id});
 
   void toggleCompleted() {
     completed = !completed;
