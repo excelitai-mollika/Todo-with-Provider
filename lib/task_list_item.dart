@@ -25,7 +25,29 @@ class TaskListItem extends StatelessWidget {
           color: Colors.red,
         ),
         onPressed: () {
-          Provider.of<TodosModel>(context, listen: false).deleteTodo(task!);
+
+
+          showDialog(
+              context: context,
+              builder: (ctx) => AlertDialog(
+                title: Text('Are you sure?'),
+                content: Text('Do you want to remove the item?'),
+                actions: [
+                  TextButton(
+                    onPressed: () {
+                      Navigator.of(ctx).pop();
+                    },
+                    child: Text('NO'),
+                  ),
+                  TextButton(
+                      onPressed: () {
+                        Provider.of<TodosModel>(context, listen: false).deleteTodo(task!);
+                        Navigator.of(ctx).pop(true);
+                      },
+                      child: Text('Yes'))
+                ],
+              ));
+
         },
       ),
     );
